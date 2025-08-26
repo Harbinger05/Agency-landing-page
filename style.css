@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    scroll-behavior: smooth;
+}
+
 .main-bg {
     background-image: url(images/desktop/image-header.jpg);
     background-repeat: no-repeat;
@@ -36,6 +40,13 @@
     cursor: pointer;
 }
 
+.nav-links ul li:hover {
+    transition: color 0.9ms ease-out;
+    color: hsl(212, 27%, 19%);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 .nav-links ul {
     display: flex;
 }
@@ -51,6 +62,11 @@
     font-size: 1rem;
     margin-left: 1rem;
     cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: hsl(209, 33%, 33%);
+    color: hsl(0, 100%, 100%);
 }
 
 .heading {
@@ -85,7 +101,7 @@
     color: hsl(212, 27%, 19%);
     font-family: "Fraunces", serif;
     font-weight: 800;
-    max-width: 300px;
+    max-width: 325px;
     margin-bottom: 2rem;
 }
 
@@ -108,6 +124,33 @@
     font-weight: 900;
     letter-spacing: 2px;
     cursor: pointer;
+    position: relative;
+}
+
+.txt .top-btn::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: -4px;
+    width: 100%;
+    height: 15px;
+    background-color: hsl(51, 85%, 82%);
+    border-radius: 20px;
+    z-index: -1;
+    padding-inline: 0.5rem;
+}
+
+.txt .mid-btn::after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    bottom: -4px;
+    width: 100%;
+    height: 15px;
+    background-color: hsl(5, 68%, 89%);
+    border-radius: 20px;
+    z-index: -1;
+    padding-inline: 0.5rem;
 }
 
 .sec-four {
@@ -298,6 +341,10 @@ footer {
     color: hsl(167, 40%, 24%);
 }
 
+.footer-links ul li:hover {
+    color: hsl(0, 100%, 100%);
+}
+
 .footer-links ul {
     display: flex;
     gap: 2rem;
@@ -305,6 +352,10 @@ footer {
 
 .socials a {
     margin: 0.8rem;
+}
+
+.socials a img:hover{
+    filter: invert(100%);
 }
 
 @media (max-width: 1024px) {
