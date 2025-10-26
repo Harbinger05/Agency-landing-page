@@ -15,6 +15,10 @@ body {
     height: 100vh;
 }
 
+.menu-icon {
+    display: none;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -48,6 +52,11 @@ body {
 }
 
 .nav-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
     display: flex;
 }
 
@@ -354,7 +363,7 @@ footer {
     margin: 0.8rem;
 }
 
-.socials a img:hover{
+.socials a img:hover {
     filter: invert(100%);
 }
 
@@ -382,7 +391,7 @@ footer {
     }
 
     .nav-links ul li {
-        display: none;
+        display: block;
     }
 
     .contact-btn {
@@ -451,5 +460,34 @@ footer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin-top: 5rem;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        color: black;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .nav-links{
+        background-color: white;
+        padding: 2rem 5rem;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 7px;
+        display: none;
+    }
+
+    .show{
+        display: block;
     }
 }
